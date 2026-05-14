@@ -87,7 +87,7 @@ def run_benchmark(weights: str, runs: int = DEFAULT_RUNS, seed: int = DEFAULT_SE
                 config={"seed": seed, "wind_enabled": False},
             )
             client.connect_ws()
-            time.sleep(0.6)
+            time.sleep(3.0)
             print(f"\n  run {i+1}/{runs}  session={session['session_id'][:8]}…")
             result = run_policy(client, policy, duration=duration, hz=20.0)
             print(f"    checkpoints={result['checkpoints_passed']}/{TARGET_CHECKPOINTS}  "

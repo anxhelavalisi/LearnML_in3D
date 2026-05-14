@@ -56,41 +56,46 @@ def forward_all(x: np.ndarray, w: dict) -> dict:
 def mse_loss(pred: np.ndarray, target: np.ndarray) -> float:
     return float(((pred - target) ** 2).mean())
 
+def backward(X, y, cache, params):
+    W1, W2, W3 = params["W1"], params["W2"], params["W3"]
 
-# ── Backward pass ────────────────────────────────────────────────────────
-def backward(x: np.ndarray, y_target: np.ndarray, w: dict, cache: dict) -> dict:
-    """Return gradients dW1, db1, ..., dW3, db3 for one mini-batch.
+    z1 = cache["z1"]
+    a1 = cache["a1"]
+    z2 = cache["z2"]
+    a2 = cache["a2"]
+    z3 = cache["z3"]
+    y_pred = cache["y"]
 
-    Args:
-        x: (N, 12)
-        y_target: (N, 2)
-        w: weight dict
-        cache: forward_all() output for this batch
+    N = X.shape[0]
 
-    Returns:
-        Dict mirroring `w`, with gradients.
-    """
-    n = x.shape[0]
-    y = cache["y"]
-    # MSE → d/dy
-    dy = 2.0 * (y - y_target) / (n * y.shape[1])
-    # tanh derivative: 1 - tanh(z3)^2 = 1 - y^2
-    dz3 = dy * (1.0 - y * y)
-    dW3 = cache["a2"].T @ dz3
+    # dL/dy (MSE)
+    dy = (2.0 / N) * (y_pred - y)
+
+    # ---- Layer 3 (tanh) ----
+    dz3 = dy * (1 - np.tanh(z3) ** 2)
+    dW3 = a2.T.dot(dz3)
     db3 = dz3.sum(axis=0)
 
-    da2 = dz3 @ w["W3"].T
-    dz2 = da2 * (cache["z2"] > 0)
-    dW2 = cache["a1"].T @ dz2
+    # ---- Layer 2 ----
+    da2 = dz3.dot(W3.T)
+    dz2 = da2 * (z2 > 0)
+    dW2 = a1.T.dot(dz2)
     db2 = dz2.sum(axis=0)
 
-    da1 = dz2 @ w["W2"].T
-    dz1 = da1 * (cache["z1"] > 0)
-    dW1 = x.T @ dz1
+    # ---- Layer 1 ----
+    da1 = dz2.dot(W2.T)
+    dz1 = da1 * (z1 > 0)
+    dW1 = X.T.dot(dz1)
     db1 = dz1.sum(axis=0)
-    return {"W1": dW1, "b1": db1, "W2": dW2, "b2": db2, "W3": dW3, "b3": db3}
 
-
+    return {
+        "W1": dW1,
+        "b1": db1,
+        "W2": dW2,
+        "b2": db2,
+        "W3": dW3,
+        "b3": db3,
+    }
 # ── Optimizer (Adam) ─────────────────────────────────────────────────────
 def init_adam(w: dict) -> dict:
     return {

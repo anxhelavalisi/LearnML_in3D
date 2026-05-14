@@ -17,7 +17,7 @@
       "runs": [
         {
           "steps": 0,
-          "elapsed": 60.02187728881836,
+          "elapsed": 60.01431369781494,
           "checkpoints_passed": 0,
           "crashes": 0,
           "min_speed_streak": 0,
@@ -25,7 +25,7 @@
         },
         {
           "steps": 0,
-          "elapsed": 60.031949520111084,
+          "elapsed": 60.01473307609558,
           "checkpoints_passed": 0,
           "crashes": 0,
           "min_speed_streak": 0,
@@ -33,7 +33,7 @@
         },
         {
           "steps": 0,
-          "elapsed": 60.03113913536072,
+          "elapsed": 60.0138041973114,
           "checkpoints_passed": 0,
           "crashes": 0,
           "min_speed_streak": 0,
@@ -41,7 +41,7 @@
         },
         {
           "steps": 0,
-          "elapsed": 60.0333685874939,
+          "elapsed": 60.014856576919556,
           "checkpoints_passed": 0,
           "crashes": 0,
           "min_speed_streak": 0,
@@ -49,7 +49,111 @@
         },
         {
           "steps": 0,
-          "elapsed": 60.03276968002319,
+          "elapsed": 60.01808786392212,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        }
+      ]
+    },
+    {
+      "seed": 7,
+      "summary": {
+        "n_runs": 5,
+        "completion_rate": 0.0,
+        "median_lap_time": Infinity,
+        "mean_crashes": 0.0,
+        "max_checkpoints": 0
+      },
+      "runs": [
+        {
+          "steps": 0,
+          "elapsed": 60.03195643424988,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        },
+        {
+          "steps": 0,
+          "elapsed": 60.031943559646606,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        },
+        {
+          "steps": 0,
+          "elapsed": 60.023613929748535,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        },
+        {
+          "steps": 0,
+          "elapsed": 60.01910328865051,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        },
+        {
+          "steps": 0,
+          "elapsed": 60.01868748664856,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        }
+      ]
+    },
+    {
+      "seed": 99,
+      "summary": {
+        "n_runs": 5,
+        "completion_rate": 0.0,
+        "median_lap_time": Infinity,
+        "mean_crashes": 0.0,
+        "max_checkpoints": 0
+      },
+      "runs": [
+        {
+          "steps": 0,
+          "elapsed": 60.00699234008789,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        },
+        {
+          "steps": 0,
+          "elapsed": 60.019166231155396,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        },
+        {
+          "steps": 0,
+          "elapsed": 60.023003578186035,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        },
+        {
+          "steps": 0,
+          "elapsed": 60.01626372337341,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        },
+        {
+          "steps": 0,
+          "elapsed": 60.020917892456055,
           "checkpoints_passed": 0,
           "crashes": 0,
           "min_speed_streak": 0,
