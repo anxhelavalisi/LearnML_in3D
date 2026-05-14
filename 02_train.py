@@ -48,12 +48,12 @@ def my_backward(X, y, w, cache  ):
     db3 = dz3.sum(axis=0)
 
     da2 = dz3 @ W3.T
-    dz2 = da2 * (z2 > 0).astype(np.float64)
+    dz2 = da2 * (z2 > 0)
     dW2 = a1.T @ dz2
     db2 = dz2.sum(axis=0)
 
     da1 = dz2 @ W2.T
-    dz1 = da1 * (z1 > 0).astype(np.float64)
+    dz1 = da1 * (z1 > 0)
     dW1 = X.T @ dz1
     db1 = dz1.sum(axis=0)
 

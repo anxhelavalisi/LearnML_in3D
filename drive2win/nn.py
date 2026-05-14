@@ -33,10 +33,8 @@ def forward(x: np.ndarray, w: dict) -> np.ndarray:
     single = x.ndim == 1
     if single:
         x = x[None, :]
-    z1 = x @ w["W1"] + w["b1"]
-    a1 = np.maximum(0, z1)
-    z2 = a1 @ w["W2"] + w["b2"]
-    a2 = np.maximum(0, z2)
+    z1 = x @ w["W1"] + w["b1"];   a1 = np.maximum(0, z1)
+    z2 = a1 @ w["W2"] + w["b2"];  a2 = np.maximum(0, z2)
     z3 = a2 @ w["W3"] + w["b3"]
     y = np.tanh(z3)
     return y[0] if single else y
