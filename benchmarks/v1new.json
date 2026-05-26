@@ -1,0 +1,61 @@
+{
+  "tag": "v1new",
+  "weights": "nav_v1new.npz",
+  "module": null,
+  "runs_per_seed": 5,
+  "duration_s": 60.0,
+  "seeds": [
+    {
+      "seed": 42,
+      "summary": {
+        "n_runs": 5,
+        "completion_rate": 0.0,
+        "median_lap_time": Infinity,
+        "mean_crashes": 0.0,
+        "max_checkpoints": 0
+      },
+      "runs": [
+        {
+          "steps": 0,
+          "elapsed": 60.01270270347595,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        },
+        {
+          "steps": 0,
+          "elapsed": 60.014710903167725,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        },
+        {
+          "steps": 0,
+          "elapsed": 60.02432632446289,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        },
+        {
+          "steps": 0,
+          "elapsed": 60.03091073036194,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        },
+        {
+          "steps": 0,
+          "elapsed": 60.01816654205322,
+          "checkpoints_passed": 0,
+          "crashes": 0,
+          "min_speed_streak": 0,
+          "track": []
+        }
+      ]
+    }
+  ]
+}
